@@ -10,10 +10,10 @@ function Chat({ chats }) {
   const { currentUser } = useContext(AuthContext);
   const { socket } = useContext(SocketContext);
 
-  const messageEndRed = useRef();
+  const messageEndRef = useRef();
 
   useEffect(() => {
-    messageEndRed.current?.scrollIntoView({ behavior: "smooth" });
+    messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [chat]);
 
   const handleSubmit = async (e) => {
